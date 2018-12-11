@@ -6,7 +6,7 @@ const response = axios.get('https://dog.ceo/api/breeds/list/all');
 // Count all sub breeds for a breed. If no subbreeds, should read 0
 exports.getImage = function(subBreed) {
     return getRandomImageOfSubBreed(subBreed);
-  }
+  } 
 
 async function getBreedCount() {
     let data = {};
