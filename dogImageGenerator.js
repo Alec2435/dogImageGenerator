@@ -3,11 +3,12 @@ const chai = require('chai');
 const expectedBreedCount = require('./expectedBreedCount.json');
 const response = axios.get('https://dog.ceo/api/breeds/list/all');
 
-// Count all sub breeds for a breed. If no subbreeds, should read 0
+//Exposes the random image function to the event handler
 exports.getImage = function(subBreed) {
     return getRandomImageOfSubBreed(subBreed);
   } 
 
+// Count all sub breeds for a breed. If no subbreeds, should read 0
 async function getBreedCount() {
     let data = {};
     for (const [key, value] of Object.entries((await response).data.message)) {
